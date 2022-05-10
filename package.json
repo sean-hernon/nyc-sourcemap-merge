@@ -1,0 +1,23 @@
+{
+    "scripts": {
+        "build": "webpack",
+        "clean": "rm -rf .nyc_output && rm -rf build && rm -rf coverage",
+        "instrument-index": "nyc --no-clean node build/index.js",
+        "instrument-via-test": "nyc --no-clean ts-mocha 'test/something.test.ts'",
+        "report": "nyc report --reporter=lcov"
+    },
+    "dependencies": {
+        "@types/mocha": "^9.1.1",
+        "mocha": "^10.0.0",
+        "nyc": "^15.1.0",
+        "ts-loader": "^9.3.0",
+        "ts-mocha": "^10.0.0",
+        "tsc": "^2.0.4",
+        "tsconfig-paths-webpack-plugin": "^3.5.2",
+        "typescript": "^4.6.4",
+        "webpack": "^5.72.1"
+    },
+    "devDependencies": {
+        "webpack-cli": "^4.9.2"
+    }
+}
