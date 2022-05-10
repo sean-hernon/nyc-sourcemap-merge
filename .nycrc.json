@@ -1,0 +1,6 @@
+{
+    "cache": false,
+    "clean": false,
+    "include": ["**/index.ts", "**/something.ts", "**/build/index.js"],
+    "silent": true
+}
